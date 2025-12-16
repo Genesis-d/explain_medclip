@@ -172,8 +172,9 @@ class MedCLIPModel(nn.Module):
             os.makedirs(input_dir)
 
             # download url link
-            pretrained_url = requests.get(pretrained_url).text
-            filename = wget.download(pretrained_url, input_dir)
+            # pretrained_url = requests.get(pretrained_url).text
+            # filename = wget.download(pretrained_url, input_dir)
+            filename = pretrained_url
 
             # unzip
             zipf = zipfile.ZipFile(filename)
